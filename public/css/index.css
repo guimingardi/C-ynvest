@@ -20,13 +20,13 @@ ul li:hover{
 
 .carrossel{
     height: 500px;
-    margin-bottom: 2%;
 }
 
 .mySlides {
     display:none;
     height: 500px;
-    width: 252%;
+    width: 252.6%; 
+    /* arrumar */
 }
 
 .pilares{
@@ -44,25 +44,29 @@ ul li:hover{
 .pilares h2{
     text-align: center;
     padding: 2%;
-    line-height: 20px
+    line-height: 22px;
 }
 
 .missao, .visao, .valor{
     width: 30%;
     height: 270px;
-    margin-bottom: 5%;
+    padding: 2%;
+    text-align: center
+
 }
 
 .missao{
-    background-color: #193441
+    background-color: #193441;
 }
 
 .visao{
-    background-color: #3E606F
+    background-color: #3E606F;
+
 }
 
 .valor{
-    background-color: #193441
+    background-color: #193441;
+
 }
 
 .metricas{
@@ -77,6 +81,9 @@ ul li:hover{
     background-color: #193441;
 }
 
+b{
+ font-weight: bolder
+}
 
 .img_metricas{
     width: 20%;
@@ -112,6 +119,9 @@ ul li:hover{
     height: 510px;
     margin-bottom: 2%;
     line-height: 30px;
+    background-color: #042F40;
+    color: #E5E5E5;
+    padding: 5% 0% 5% 0%
 }
 
 .sobre_produto{
@@ -148,24 +158,32 @@ ul li:hover{
     padding-top: 10px;
     width: 25%;
     height: 200px;
-    border-radius: 5% 5% 5% 5%;
 }
 
 .bd{
-    border-left: solid black 2px;
+    border-left: solid rgb(255, 255, 255) 2px;
     height: 200px;
 }
 
 .bd_dois{
-    border-right: solid black 2px;
+    border-right: solid rgb(255, 255, 255) 2px;
     height: 200px;
     margin-right: 1%
 }
 
 .img_pilares{
     width: 20%;
-    margin-left: 40%;
-    padding: 15px
+    padding: 15px;
+}
+
+.negociacao{
+    box-sizing: border-box;
+    margin-bottom: -1%;
+
+}
+
+.negociacao img{
+    width: 100%;
 }
 
 
