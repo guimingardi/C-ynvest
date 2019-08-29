@@ -5,7 +5,7 @@ body{
 
 .menu{
     display: flex;
-    font-size: 25px;
+    font-size: 20px;
     color: #E5E5E5;
     justify-content: space-around;
     background-color: #3E606F;
@@ -16,6 +16,10 @@ body{
 ul li:hover{
     color: black;
     cursor: pointer;
+}
+
+.logo{
+    margin-right: 40%
 }
 
 .carrossel{
@@ -70,15 +74,12 @@ ul li:hover{
 }
 
 .metricas{
-    width: 90%;
-    /* border: solid rgb(0, 0, 0); */
     height: 100px;
     text-align: center;
     margin-left: 5%;
-    display: flex;
     justify-content: space-around;
     margin-bottom: 5%;
-    background-color: #193441;
+
 }
 
 b{
@@ -100,7 +101,7 @@ b{
 }
 
 .sub_titulo_metricas{
-    color: #E5E5E5;
+    color: rgb(0, 0, 0);
     font-size: 20px;
     float: left;
     padding: 1%;
@@ -117,7 +118,7 @@ b{
 .paragrafos{
     width: 100%;
     height: 510px;
-    margin-bottom: 2%;
+
     line-height: 30px;
     background-color: #042F40;
     color: #E5E5E5;
@@ -191,6 +192,12 @@ b{
     font-size: 40px;
     color: #E5E5E5;
     padding: 2%;
-    
+    margin-bottom: 4%
 }
 
+.container_numeros{
+    background-image: url(../img/analysis-analytics-background-590041.jpg);
+    height: 600px;
+    background-size: 100%;
+    
+}
