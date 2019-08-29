@@ -19,9 +19,14 @@ ul li:hover{
 }
 
 .carrossel{
-    border: solid black 2px;
     height: 500px;
     margin-bottom: 2%;
+}
+
+.mySlides {
+    display:none;
+    height: 500px;
+    width: 252%;
 }
 
 .pilares{
@@ -62,13 +67,40 @@ ul li:hover{
 
 .metricas{
     width: 90%;
-    border: solid rgb(0, 0, 0);
+    /* border: solid rgb(0, 0, 0); */
     height: 100px;
     text-align: center;
     margin-left: 5%;
     display: flex;
     justify-content: space-around;
-    margin-bottom: 5%
+    margin-bottom: 5%;
+    background-color: #193441;
+}
+
+
+.img_metricas{
+    width: 20%;
+    float: left;
+    margin-top: 17px
+}
+
+.numeros_metricas{
+    color: #FF5252;
+    float: left;
+    margin-top: 5%;
+    padding-left: 5%;
+    font-size: 30px
+}
+
+.sub_titulo_metricas{
+    color: #E5E5E5;
+    font-size: 20px;
+    float: left;
+    padding: 1%;
+}
+
+.padd{
+    margin-top: 13%;
 }
 
 .empresas, .pc, .paises{
@@ -94,14 +126,16 @@ ul li:hover{
     width: 100%;
     height: 250px;
     box-sizing: border-box;
-    display: flex
+    display: flex;
+    margin-bottom: 4%
 }
 
 .paragrafo_dois{
     width: 100%;
     height: 50%;
     box-sizing: border-box;
-    display: flex
+    display: flex;
+
 }
 
 .text{
@@ -133,3 +167,5 @@ ul li:hover{
     margin-left: 40%;
     padding: 15px
 }
+
+
