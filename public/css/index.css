@@ -2,6 +2,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+ul li:hover {
+    color: rgb(115, 154, 185);
+    cursor: pointer;
+}
+
 .menu {
     display: flex;
     font-size: 20px;
@@ -11,16 +16,6 @@ body {
     padding: 1% 0% 1% 0%;
     width: 100%;
     font-family: 'Montserrat', sans-serif;
-}
-
-ul li:hover {
-    /* color: #FED128; */
-    color: rgb(115, 154, 185);
-    cursor: pointer;
-}
-
-.logo {
-    margin-right: 40%;
 }
 
 .topo {
