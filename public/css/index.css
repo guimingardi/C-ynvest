@@ -1,9 +1,8 @@
-body{
+body {
     font-family: 'Montserrat', sans-serif;
-
 }
 
-.menu{
+.menu {
     display: flex;
     font-size: 20px;
     color: rgb(229, 229, 229);
@@ -12,50 +11,41 @@ body{
     padding: 1% 0% 1% 0%;
     width: 100%;
     font-family: 'Montserrat', sans-serif;
-
 }
 
-ul li:hover{
+ul li:hover {
     /* color: #FED128; */
     color: rgb(115, 154, 185);
     cursor: pointer;
 }
 
-.logo{
+.logo {
     margin-right: 40%;
 }
 
-.topo{
+.topo {
     height: 400px;
     background-color: rgb(0, 0, 0);
     text-align: center;
     padding-top: 15%
-
 }
 
-.topo h2{
+.topo h2 {
     color: #E5E5E5;
     font-size: 25px;
 }
 
-b{
+b {
     font-size: 150px
 }
 
 .titulo {
     color: rgb(255, 255, 255);
     font-size: 9vw;
-    line-height: 9vw;   
-  }
-  
-.img_animacao{
-    display: flex;
-    color: #E5E5E5;
-    width: 90%;
-    margin-left: 5%;
+    line-height: 9vw;
 }
 
-.btt{
+.btt {
     border: solid rgb(255, 255, 255);
     width: 7%;
     padding: 1%;
@@ -74,176 +64,46 @@ b{
     font-weight: 400
 }
 
-.pilares{
-    display: flex
+.pilares {
+    display: flex;
+    background-color: rgb(27, 27, 27);
 }
 
-.pilares h1{
+.pilares h1 {
     font-size: 30px;
     text-align: center;
     margin-bottom: 2%;
 }
 
-.pilares h2{
+.pilares h2 {
     text-align: center;
     padding: 2%;
     line-height: 22px;
     font-family: 'Lato', sans-serif;
 }
 
-.missao, .visao, .valor{
+.missao, .visao, .valor {
     width: 30%;
     height: 270px;
     padding: 2%;
     text-align: center;
     color: #E5E5E5
-
 }
 
-.missao h1, .visao h1, .valor h1{
-    color: rgb(115, 154, 185)
+.missao h1, .visao h1, .valor h1 {
+    color: rgb(74, 163, 236)
 }
 
-.missao{
-    background-color: #404040;
-}
-
-.visao{
-    background-color: #404040;
-
-}
-
-.valor{
-    background-color: #404040;
-
-}
-
-.metricas{
-    height: 100px;
-    text-align: center;
-    margin-left: 5%;
-    justify-content: space-around;
-    margin-bottom: 5%;
-    font-family: 'Lato', sans-serif;
-}
-
-.img_metricas{
-    width: 20%;
-    float: left;
-    margin-top: 17px
-}
-
-.numeros_metricas{
-    color: #FF5252;
-    float: left;
-    margin-top: 5%;
-    padding-left: 5%;
-    font-size: 30px
-}
-
-.sub_titulo_metricas{
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    float: left;
-    padding: 1%;
-}
-
-.padd{
-    margin-top: 13%;
-}
-
-.empresas, .pc, .paises{
-    width: 30%;
-}
-
-.paragrafos{
-    width: 100%;
-    height: 510px;
-
-    line-height: 30px;
-    background-color: #594F4F;
-    color: #E5E5E5;
-    padding: 5% 0% 5% 0%
-}
-
-.sobre_produto{
-    width: 90%;
-    margin-left: 5%;
-    height: 500px;
-    margin-bottom: 2%;
-
-}
-
-.paragrafo_um{
-    width: 100%;
-    height: 250px;
-    box-sizing: border-box;
-    display: flex;
-    margin-bottom: 4%
-}
-
-.paragrafo_dois{
-    width: 100%;
-    height: 50%;
-    box-sizing: border-box;
-    display: flex;
-
-}
-
-.text{
-    margin-left: 1%;
-    font-size: 25px;
-    padding: 10px;
-    font-family: 'Lato', sans-serif;
-}
-
-.img_parag_um, .img_pag_dois{
-    padding-top: 10px;
-    width: 25%;
-    height: 200px;
-}
-
-.bd{
-    border-left: solid rgb(255, 255, 255) 2px;
-    height: 200px;
-}
-
-.bd_dois{
-    border-right: solid rgb(255, 255, 255) 2px;
-    height: 200px;
-    margin-right: 1%
-}
-
-.img_pilares{
+.img_pilares {
     width: 20%;
     padding: 15px;
 }
 
-.img_transicao{
+.img_transicao {
     height: 125px;
     background-image: url(../img/art-big-data-blur-373543.jpg);
     background-attachment: fixed;
     filter: grayscale(70%);
     opacity: 50%;
-    margin-bottom: 20%
-}
-
-.negociacao img{
-    width: 100%;
-}
-
-.numeros_illumy{
-    text-align: center;
-    font-size: 40px;
-    color: #E5E5E5;
-    padding: 2%;
-    margin-bottom: 4%
-}
-
-.container_numeros{
-    background-image: url(../img/analysis-analytics-background-590041.jpg);
-    height: 600px;
-    background-size: 100%;
-    
 }
 
