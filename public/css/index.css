@@ -86,7 +86,7 @@ b {
 }
 
 .missao h1, .visao h1, .valor h1 {
-    color: rgb(74, 163, 236)
+    color: rgb(74, 163, 236);
 }
 
 .img_pilares {
@@ -102,3 +102,51 @@ b {
     opacity: 50%;
 }
 
+.container_box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nossos_produtos{
+    margin-bottom: 5%;
+}
+
+.img_background_produtos{
+    background-image: url(../img/dark-lightning-night-56614.jpg);
+    background-attachment: fixed;
+    filter: grayscale(70%);
+    opacity: 50%;
+}
+
+.nossos_produtos h1 {
+    text-align: center;
+    font-size: 40px;
+    padding: 2%;
+    color: #E5E5E5;
+}
+
+.box h2 {
+    text-align: center;
+    padding: 2%;
+    font-weight: 600;
+    color: rgb(0, 225, 255);
+}
+
+.box img {
+    width: 20%;
+    padding: 5%
+}
+
+.box p {
+    line-height: 30px;
+    color: #E5E5E5;
+    margin-bottom: 3%
+}
+
+.box {
+    width: 30%;
+    margin-bottom: 5%;
+    text-align: center;
+    background-color: rgba(27, 27, 27, 0.8);
+
+}
