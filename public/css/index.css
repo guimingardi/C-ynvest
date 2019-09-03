@@ -103,12 +103,13 @@ ul li:hover {
     justify-content: space-around;
 }
 
-.nossos_produtos{
-    margin-bottom: 5%;
+
+.nossos_produtos p {
+    padding: 3%;
 }
 
-.img_background_produtos{
-    background-image: url(../img/dark-lightning-night-56614.jpg);
+.img_background_produtos {
+    background-image: url(../img/art-big-data-blur-373543.jpg);
     background-attachment: fixed;
     filter: grayscale(70%);
     opacity: 50%;
@@ -124,8 +125,8 @@ ul li:hover {
 .box h2 {
     text-align: center;
     padding: 2%;
-    font-weight: 600;
-    color: rgb(0, 225, 255);
+    font-size: 25px;
+    color: rgb(74, 163, 236);
 }
 
 .box img {
@@ -143,6 +144,34 @@ ul li:hover {
     width: 30%;
     margin-bottom: 5%;
     text-align: center;
-    background-color: rgba(27, 27, 27, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
+.area_metricas{
+    background-image: url(../img/architectural-architectural-design-architecture-1029615.jpg);
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    line-height: 105px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.area_metricas h1{
+    font-size: 90px;
+    width: 25%;
+    color: rgb(29, 21, 21);
+    padding-top: 3%;
+    padding-left: 1%;
+}
+
+.numeros{
+    font-size: 30px;
+    margin-right: 3%;
+    margin-top: 3%;
+}
+
+b{
+    font-weight: bold;
+    color: rgb(74, 163, 236);
 }
