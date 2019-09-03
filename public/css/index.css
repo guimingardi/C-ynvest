@@ -148,27 +148,32 @@ ul li:hover {
 }
 
 .area_metricas{
-    background-image: url(../img/architectural-architectural-design-architecture-1029615.jpg);
+    /* background-image: url(../img/architectural-architectural-design-architecture-1029615.jpg); */
+    background-color: rgb(27, 27, 27);
     width: 100%;
     height: 400px;
     background-size: cover;
     line-height: 105px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 50%
 }
 
 .area_metricas h1{
     font-size: 90px;
     width: 25%;
     color: rgb(29, 21, 21);
-    padding-top: 3%;
+    padding-top: 7%;
     padding-left: 1%;
+    color: #E5E5E5;
 }
 
 .numeros{
     font-size: 30px;
     margin-right: 3%;
     margin-top: 3%;
+    color: #E5E5E5;
+
 }
 
 b{
