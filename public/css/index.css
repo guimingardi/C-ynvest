@@ -30,7 +30,7 @@ ul li:hover {
     font-size: 25px;
 }
 
-.titulo {
+.titulo-principal{
     color: rgb(255, 255, 255);
     font-size: 9vw;
     line-height: 9vw;
@@ -60,12 +60,6 @@ ul li:hover {
     background-color: rgb(27, 27, 27);
 }
 
-.pilares h1 {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 2%;
-}
-
 .pilares h2 {
     text-align: center;
     padding: 2%;
@@ -83,6 +77,7 @@ ul li:hover {
 
 .missao h1, .visao h1, .valor h1 {
     color: rgb(74, 163, 236);
+    font-size: 40px
 }
 
 .img_pilares {
@@ -103,23 +98,29 @@ ul li:hover {
     justify-content: space-around;
 }
 
-
 .nossos_produtos p {
     padding: 3%;
 }
 
-.img_background_produtos {
-    background-image: url(../img/art-big-data-blur-373543.jpg);
+/* .img_background_produtos {
+    background-image: url(../img/desk-home-office-indoors-1036808.jpg);
+    background-size: cover;
     background-attachment: fixed;
     filter: grayscale(70%);
     opacity: 50%;
+} */
+
+
+.titulo{
+    font-size: 90px;
+    width: 25%;
+    color: rgb(29, 21, 21);
+    padding: 3%;
+    color: #E5E5E5;
 }
 
-.nossos_produtos h1 {
-    text-align: center;
-    font-size: 40px;
-    padding: 2%;
-    color: #E5E5E5;
+.pdt{
+    color: #262E36;
 }
 
 .box h2 {
@@ -137,14 +138,28 @@ ul li:hover {
 .box p {
     line-height: 30px;
     color: #E5E5E5;
-    margin-bottom: 3%
+    margin-bottom: 3%;
+    text-align: justify
 }
 
 .box {
     width: 30%;
     margin-bottom: 5%;
+    height: 500px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 20px 20px 20px 20px;
+}
+
+.bnt{
+    color: rgb(80, 198, 219);
+    margin-top: 90px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.bnt:hover{
+    color: #E5E5E5;
 }
 
 .area_metricas{
@@ -156,16 +171,6 @@ ul li:hover {
     line-height: 105px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50%
-}
-
-.area_metricas h1{
-    font-size: 90px;
-    width: 25%;
-    color: rgb(29, 21, 21);
-    padding-top: 7%;
-    padding-left: 1%;
-    color: #E5E5E5;
 }
 
 .numeros{
@@ -179,4 +184,10 @@ ul li:hover {
 b{
     font-weight: bold;
     color: rgb(74, 163, 236);
+}
+
+.time{
+    height: 500px;
+    width: 100%;
+    background-color: #262E36;
 }
