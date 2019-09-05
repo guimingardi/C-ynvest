@@ -30,7 +30,7 @@ ul li:hover {
     font-size: 25px;
 }
 
-.titulo-principal{
+.titulo-principal {
     color: rgb(255, 255, 255);
     font-size: 9vw;
     line-height: 9vw;
@@ -110,8 +110,7 @@ ul li:hover {
     opacity: 50%;
 } */
 
-
-.titulo{
+.titulo {
     font-size: 90px;
     width: 25%;
     color: rgb(29, 21, 21);
@@ -119,7 +118,7 @@ ul li:hover {
     color: #E5E5E5;
 }
 
-.pdt{
+.pdt {
     color: #262E36;
 }
 
@@ -151,42 +150,60 @@ ul li:hover {
     border-radius: 20px 20px 20px 20px;
 }
 
-.bnt{
+.bnt {
     color: rgb(80, 198, 219);
     margin-top: 90px;
     font-size: 22px;
     cursor: pointer;
 }
 
-.bnt:hover{
+.bnt:hover {
     color: #E5E5E5;
 }
 
-.area_metricas{
+.area_metricas {
     /* background-image: url(../img/architectural-architectural-design-architecture-1029615.jpg); */
     background-color: rgb(27, 27, 27);
     width: 100%;
     height: 400px;
     background-size: cover;
     line-height: 105px;
-    display: flex;
-    justify-content: space-between;
 }
 
-.numeros{
+/* .numeros {
     font-size: 30px;
     margin-right: 3%;
     margin-top: 3%;
     color: #E5E5E5;
-
-}
-
-b{
+} */
+/* 
+b {
     font-weight: bold;
     color: rgb(74, 163, 236);
+} */
+
+.clientes{
+    color: #E5E5E5;
+    width: 100%;
+    margin-left: 3%;
 }
 
-.time{
+.animacao {
+    height: 10px;
+    border-radius: 5px 5px 5px 5px;
+    width: 60%;
+    background-color: aquamarine;
+    animation: carregar  6s;
+    color: #E5E5E5;
+}
+
+@keyframes carregar{
+    0% { width: 0%; }
+    
+    100% { width: 60%}
+}
+
+.time {
     height: 500px;
     width: 100%;
     background-color: #262E36;
