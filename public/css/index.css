@@ -178,7 +178,13 @@ ul li:hover {
     cursor: pointer;
 }
 
-.bnt:hover {
+.bnt1:hover {
+    color: #E5E5E5;
+}
+.bnt2:hover {
+    color: #E5E5E5;
+}
+.bnt3:hover {
     color: #E5E5E5;
 }
 
