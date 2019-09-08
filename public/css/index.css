@@ -79,7 +79,7 @@ header{
 
 .missao, .visao, .valor {
     width: 30%;
-    height: 270px;
+    height: 650px;
     padding: 2%;
     text-align: center;
     color: #E5E5E5
@@ -256,7 +256,7 @@ header{
 }
 
 .time {
-    height: 500px;
+    height: 650px;
     width: 100%;
     background-color: #262E36;
 }
@@ -264,7 +264,7 @@ header{
 .area_metricas {
     background-color: rgb(27, 27, 27);
     width: 100%;
-    height: 450px;
+    height: 650px;
     background-size: cover;
     line-height: 20px;
 }
