@@ -98,6 +98,10 @@ ul li:hover {
     justify-content: space-around;
 }
 
+.fundo-produtos {
+    background-color: #262E36
+}
+
 .nossos_produtos p {
     padding: 3%;
 }
@@ -111,7 +115,7 @@ ul li:hover {
 }
 
 .pdt {
-    color: #262E36;
+    color: rgb(255, 255, 255);
 }
 
 .box h2 {
@@ -129,7 +133,6 @@ ul li:hover {
 .box p {
     line-height: 30px;
     color: #E5E5E5;
-    margin-bottom: 3%;
     text-align: justify
 }
 
@@ -266,7 +269,6 @@ ul li:hover {
     -o-animation: fadeIn 5s ease-in-out;
     animation: fadeIn 5s ease-in-out;
 }
-
 
 .numeros {
     display: flex;
