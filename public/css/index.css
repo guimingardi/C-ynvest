@@ -274,16 +274,16 @@ header{
     position: relative;
     color: #E5E5E5;
     float: left;
-    -webkit-animation: fadeIn 5s ease-in-out;
-    -moz-animation: fadeIn 5s ease-in-out;
-    -o-animation: fadeIn 5s ease-in-out;
-    animation: fadeIn 5s ease-in-out;
 }
 
 .numeros {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    -webkit-animation: fadeIn 5s ease-in-out;
+    -moz-animation: fadeIn 5s ease-in-out;
+    -o-animation: fadeIn 5s ease-in-out;
+    animation: fadeIn 5s ease-in-out;
 }
 
 .indicadores img {
@@ -306,8 +306,5 @@ header{
 .indicadores {
     margin-top: 35px;
     position: relative;
-    -webkit-animation: fadeIn 5s ease-in-out;
-    -moz-animation: fadeIn 5s ease-in-out;
-    -o-animation: fadeIn 5s ease-in-out;
-    animation: fadeIn 5s ease-in-out;
+
 }

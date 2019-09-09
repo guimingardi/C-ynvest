@@ -1,11 +1,11 @@
 //Script
 $(document).ready(function(){ 
 
-    $('.indicadores').hide(); // esconde a div clientes
+    $('.numeros').hide(); // esconde a div numeros
     
     $(window).scroll(function(){ // inicia a função 
-        if($(this).scrollTop()>1400){  // se o scroll top, o rolar do mouse do topo for maior que 1400
-            $('.indicadores').fadeIn(); // revela a div clientes
+        if($(this).scrollTop()>2350){  // se o scroll top, o rolar do mouse do topo for maior que 2350
+            $('.numeros').fadeIn(); // revela a div clientes
                
         }
                    
