@@ -378,26 +378,7 @@ header {
     color: grey;
 }
 
-<<<<<<< HEAD
 .card_time:hover .container{
     visibility: visible;
     opacity: 1;
-=======
-.botao_time {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-.botao_time:hover {
-    background-color: #555;
->>>>>>> Adiciona cards do time
 }
