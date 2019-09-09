@@ -258,12 +258,6 @@ header {
     }
 }
 
-.time {
-    height: 650px;
-    width: 100%;
-    background-color: #262E36;
-}
-
 .area_metricas {
     background-color: rgb(27, 27, 27);
     width: 100%;
@@ -309,4 +303,69 @@ header {
 .indicadores {
     margin-top: 35px;
     position: relative;
+}
+
+.time {
+    box-sizing: border-box;
+    height: 1100px;
+    width: 100%;
+    background-color: #262E36;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.coluna {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+    .coluna {
+        width: 100%;
+        display: block;
+    }
+}
+
+.card_time {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+.botao_time {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.botao_time:hover {
+    background-color: #555;
 }
