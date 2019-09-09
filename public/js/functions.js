@@ -4,7 +4,7 @@ $(document).ready(function(){
     $('.numeros').hide(); // esconde a div numeros
     
     $(window).scroll(function(){ // inicia a função 
-        if($(this).scrollTop()>2350){  // se o scroll top, o rolar do mouse do topo for maior que 2350
+        if($(this).scrollTop()>2300){  // se o scroll top, o rolar do mouse do topo for maior que 2300
             $('.numeros').fadeIn(); // revela a div clientes
                
         }
