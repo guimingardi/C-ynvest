@@ -345,13 +345,27 @@ header {
 
 .card_time {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: white;
+    position: relative;
+    text-align: center;
 }
 
 .container {
-    padding: 0 16px;
-    display: none;
+    position: absolute;
+    top: 60%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(211, 211, 211,0.7);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
 }
+.texto_time{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
 .container::after,
 .row::after {
@@ -364,6 +378,7 @@ header {
     color: grey;
 }
 
-img:hover + div{
-    display: block;
+.card_time:hover .container{
+    visibility: visible;
+    opacity: 1;
 }
