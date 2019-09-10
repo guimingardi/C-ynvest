@@ -11,12 +11,47 @@ $(document).ready(function(){
                    
         });
 
-        $('.btt').click(function(){ // ao clicar no botão "btt"
-            $('html, body').animate({ // indica que o corpo da página será animado
-                scrollTop : 750   // ação : scrollar,descer  até o scroll 750
+        $('.btt').click(function(){ 
+            $('html, body').animate({ 
+                scrollTop : 750   
                 
-            },2000); // velocidade da descida
+            },1500); 
          });
+
+         $('.btHome').click(function(){ 
+            $('html, body').animate({ 
+                scrollTop : 0  
+                
+            },1500); 
+         });
+
+         $('.btSobre').click(function(){ 
+            $('html, body').animate({ 
+                scrollTop : 750   
+                
+            },1500); 
+         });
+
+         $('.btProdutos').click(function(){ 
+            $('html, body').animate({ 
+                scrollTop : 1700   
+                
+            },1500); 
+         });
+
+         $('.btMetricas').click(function(){ 
+         $('html, body').animate({ 
+             scrollTop : 2450   
+             
+         },1500);
+      });
+        
+         $('.btTime').click(function(){ 
+         $('html, body').animate({ 
+             scrollTop : 3000   
+         },1500); 
+      });
+
 
     });
    
