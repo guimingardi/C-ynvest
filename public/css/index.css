@@ -269,12 +269,6 @@ header {
     }
 }
 
-.time {
-    height: 650px;
-    width: 100%;
-    background-color: #262E36;
-}
-
 .area_metricas {
     background-color: rgb(27, 27, 27);
     width: 100%;
@@ -321,3 +315,4 @@ header {
     margin-top: 35px;
     position: relative;
 }
+
