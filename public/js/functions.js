@@ -27,28 +27,28 @@ $(document).ready(function(){
 
          $('.btSobre').click(function(){ 
             $('html, body').animate({ 
-                scrollTop : 750   
+                scrollTop : 800   
                 
             },1500); 
          });
 
          $('.btProdutos').click(function(){ 
             $('html, body').animate({ 
-                scrollTop : 1700   
+                scrollTop : 1600   
                 
             },1500); 
          });
 
          $('.btMetricas').click(function(){ 
          $('html, body').animate({ 
-             scrollTop : 2450   
+             scrollTop : 2350   
              
          },1500);
       });
         
          $('.btTime').click(function(){ 
          $('html, body').animate({ 
-             scrollTop : 3000   
+             scrollTop : 3100   
          },1500); 
       });
 
