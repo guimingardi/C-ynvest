@@ -355,7 +355,7 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(211, 211, 211,0.7);
+    background: rgba(211, 211, 211,0.8);
     visibility: hidden;
     opacity: 0;
     transition: opacity .2s, visibility .2s;
@@ -381,4 +381,8 @@ header {
 .card_time:hover .container{
     visibility: visible;
     opacity: 1;
+}
+.social-img-time{
+    margin-top: 2%;
+    width: 10%;
 }
