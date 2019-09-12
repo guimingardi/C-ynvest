@@ -1,0 +1,82 @@
+.container_box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.fundo-produtos {
+    background-color: #00838f
+}
+
+.nossos_produtos p {
+    padding: 3%;
+}
+
+.box h2 {
+    text-align: center;
+    padding: 2%;
+    font-size: 25px;
+    color: rgb(74, 163, 236);
+}
+
+.box img {
+    width: 20%;
+    padding: 5%
+}
+
+.box p {
+    line-height: 30px;
+    color: #E5E5E5;
+    text-align: justify
+}
+
+.box b {
+    line-height: 8px;
+    color: rgb(80, 198, 219);
+    margin-bottom: 3%;
+    text-align: justify
+}
+
+.box {
+    width: 30%;
+    margin-bottom: 5%;
+    height: 500px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 20px 20px 20px 20px;
+}
+
+/* REFAORAR ESSA PARTE */
+.bnt1 {
+    color: rgb(80, 198, 219);
+    margin-top: 15%;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.bnt2 {
+    color: rgb(80, 198, 219);
+    margin-top: 12%;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.bnt3 {
+    color: rgb(80, 198, 219);
+    margin-top: 5%;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.bnt1:hover {
+    color: #E5E5E5;
+}
+
+.bnt2:hover {
+    color: #E5E5E5;
+}
+
+.bnt3:hover {
+    color: #E5E5E5;
+}
+
+/* FIM */

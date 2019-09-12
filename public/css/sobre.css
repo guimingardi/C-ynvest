@@ -1,0 +1,42 @@
+.container-pilares{
+    display: flex;
+    justify-content: space-between;
+    padding: 3%
+}
+
+.pilares {
+    background-color: rgb(27, 27, 27);
+}
+
+.pilares h2 {
+    font-size: 20px;
+    text-align: center;
+    padding: 2%;
+    line-height: 40px;
+    font-family: 'Lato', sans-serif;
+}
+
+.missao,
+.visao,
+.valor {
+    width: 30%;
+    height: 480px;
+    text-align: center;
+    color: #E5E5E5;
+    border: solid rgb(17, 115, 153);
+    border-radius: 10px 10px 10px 10px;
+    margin: -5% 0% 5% 0%;
+}
+
+.missao h1,
+.visao h1,
+.valor h1 {
+    color: rgb(74, 163, 236);
+    font-size: 45px;
+    padding: 2%;
+}
+
+.img_pilares {
+    width: 30%;
+    padding: 10%;
+}

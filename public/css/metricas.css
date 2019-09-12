@@ -1,0 +1,100 @@
+.animacao {
+    height: 10px;
+    border-radius: 5px 5px 5px 5px;
+    width: 60%;
+    background-color: aquamarine;
+    animation: carregar 6s;
+    color: #E5E5E5;
+}
+
+@keyframes carregar {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 60%
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.area_metricas {
+    background-color: rgb(27, 27, 27);
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+    line-height: 20px;
+}
+
+.indicadores {
+    margin-left: 1%;
+    position: relative;
+    color: #E5E5E5;
+    float: left;
+}
+
+.numeros {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    -webkit-animation: fadeIn 3s ease-in-out;
+    -moz-animation: fadeIn 3s ease-in-out;
+    -o-animation: fadeIn 3s ease-in-out;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.indicadores img {
+    width: 20%;
+    margin-top: 18px;
+}
+
+.indicadores h1 {
+    font-size: 55px;
+    color: #E5E5E5;
+    margin-top: 20px;
+}
+
+.indicadores p {
+    font-size: 20px;
+    margin-top: 22px;
+    color: #E5E5E5
+}
+
+.indicadores {
+    margin-top: 35px;
+    position: relative;
+}

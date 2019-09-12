@@ -1,0 +1,7 @@
+.img_transicao {
+    height: 125px;
+    background-image: url(../img/art-big-data-blur-373543.jpg);
+    background-attachment: fixed;
+    filter: grayscale(70%);
+    opacity: 50%;
+}
