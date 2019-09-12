@@ -1,0 +1,26 @@
+a {
+    text-decoration: none;
+    color: #E5E5E5;
+}
+
+ul li a:hover {
+    color: rgb(115, 154, 185);
+    cursor: pointer;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.menu {
+    display: flex;
+    font-size: 20px;
+    color: rgb(229, 229, 229);
+    justify-content: space-around;
+    background-color: rgb(41, 41, 41);
+    padding: 1% 0% 1% 0%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
