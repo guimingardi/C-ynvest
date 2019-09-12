@@ -1,6 +1,6 @@
 .time {
     box-sizing: border-box;
-    height: 900px;
+    height: 1000px;
     width: 100%;
     background-color: #262E36;
 }
@@ -31,6 +31,10 @@
     text-align: center;
 }
 
+.img-time {
+    width: 100%;
+}
+
 .container {
     position: absolute;
     top: 60%;
@@ -42,13 +46,14 @@
     opacity: 0;
     transition: opacity .2s, visibility .2s;
 }
-.texto_time{
+
+.texto_time {
     position: absolute;
     bottom: 0px;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-  }
+}
 
 .container::after,
 .row::after {
@@ -58,14 +63,16 @@
 }
 
 .title {
-    color: rgb(74, 163, 236);;
+    color: rgb(74, 163, 236);
+    ;
 }
 
-.card_time:hover .container{
+.card_time:hover .container {
     visibility: visible;
     opacity: 1;
 }
-.social-img-time{
+
+.social-img-time {
     width: 10%;
     margin-top: 8px;
 }
