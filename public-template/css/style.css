@@ -409,7 +409,7 @@ a:hover {
 }
 
 .nav-scroll {
-  background: #fff;
+  background: rgb(26, 26, 26);
   -webkit-box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.05);
   padding: 0;
@@ -428,16 +428,17 @@ a:hover {
   color: #222;
 }
 .nav-scroll .navbar-nav .nav-link {
-  color: #222;
+  color: rgb(255, 255, 255);
 }
-.nav-scroll .navbar-nav .logo {
+.nav-scroll .navbar-nav .logo-illumy {
   padding: 15px 0;
   color: #111;
+  background-color: #000;
 }
 
-.logo {
+.logo-illumy {
   padding: 15px 0;
-  width: 100px;
+  width: 200px;
 }
 
 /* ----------------------------------------------------------------
