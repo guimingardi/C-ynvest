@@ -425,7 +425,7 @@ a:hover {
           transform: translateY(100px);
 }
 .nav-scroll .icon-bar {
-  color: #222;
+  color: rgb(255, 255, 255);
 }
 .nav-scroll .navbar-nav .nav-link {
   color: rgb(255, 255, 255);
@@ -594,13 +594,18 @@ a:hover {
   position: relative;
   z-index: 3;
 }
-.hero .feat-item:hover .icon {
+
+/* Remove a animação do hover na parte de serviços */
+
+/* .hero .feat-item:hover .icon {
   color: #fff;
-}
-.hero .feat-item:hover .icon:after {
+} */
+/* .hero .feat-item:hover .icon:after {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
-}
+} */
+
+
 .hero .feat-item .icon {
   width: 90px;
   height: 90px;
