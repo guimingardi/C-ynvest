@@ -21,6 +21,9 @@ public class InsertBanco {
         String sql = "insert into monitoramento_teste" +
                 " (dadosCPU,dadosRAM,dadosDISCO)" +
                 " values (?,?,?)";
+        
+        try {
+        	
         PreparedStatement stmt = con.prepareStatement(sql);
 
 
@@ -30,6 +33,12 @@ public class InsertBanco {
 
         stmt.execute();
         stmt.close();
+        
+        }
+        catch (SQLException e) {
+        	
+            throw new RuntimeException(e);
+        }
 
         System.out.println("Dados Gravados!");
 
