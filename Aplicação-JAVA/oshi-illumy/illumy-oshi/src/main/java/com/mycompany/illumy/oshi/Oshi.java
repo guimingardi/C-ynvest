@@ -8,9 +8,9 @@ import oshi.software.os.OperatingSystem;
 import oshi.util.FormatUtil;
 
 public class Oshi {
-   private SystemInfo systemInfo;
-   private OperatingSystem operatingSystem;
-   private HardwareAbstractionLayer hardware;
+   private final SystemInfo systemInfo;
+   private final OperatingSystem operatingSystem;
+   private final HardwareAbstractionLayer hardware;
    
    public Oshi(){
        systemInfo = new SystemInfo();
