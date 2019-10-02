@@ -6,13 +6,15 @@ import oshi.software.os.OperatingSystem;
 
 public class TelaDashboard extends javax.swing.JFrame {
 
-    Oshi oshi = new Oshi();
-    private SystemInfo systemInfo = new SystemInfo();
-    private OperatingSystem operatingSystem = systemInfo.getOperatingSystem();
-    private HardwareAbstractionLayer hardware = systemInfo.getHardware();
+    Memoria memoria = new Memoria();
+    Processador processador = new Processador();
+    private final SystemInfo systemInfo = new SystemInfo();
+    private final OperatingSystem operatingSystem = systemInfo.getOperatingSystem();
+    private final HardwareAbstractionLayer hardware = systemInfo.getHardware();
 
     public void mostraMemoria() {
-        labelMemoriaDisponivel.setText(oshi.recebeMemoria(hardware.getMemory()));
+        //labelMemoriaDisponivel.setText(memoria.recebeMemoriaDisponivel(hardware.getMemory()));
+        labelMemoriaDisponivel.setText(processador.utilizacaoAtualProcessador(hardware.getProcessor()));
     }
 
     public TelaDashboard() {
