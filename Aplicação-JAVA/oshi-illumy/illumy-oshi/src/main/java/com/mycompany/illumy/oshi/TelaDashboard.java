@@ -13,8 +13,8 @@ public class TelaDashboard extends javax.swing.JFrame {
     private final HardwareAbstractionLayer hardware = systemInfo.getHardware();
 
     public void mostraMemoria() {
-        //labelMemoriaDisponivel.setText(memoria.recebeMemoriaDisponivel(hardware.getMemory()));
-        lbMemoriaDisponivel.setText(processador.utilizacaoAtualProcessador(hardware.getProcessor()));
+        lbMemoriaDisponivel.setText(memoria.getMemoriaDisponivel(hardware.getMemory()));
+        //lbMemoriaDisponivel.setText(processador.getUtilizacaoAtualProcessador(hardware.getProcessor()));
     }
 
     public TelaDashboard() {
@@ -102,7 +102,7 @@ public class TelaDashboard extends javax.swing.JFrame {
 
         jLabel15.setText("Temperatura atual:");
 
-        lbMarcaComputador.setText("<html><b style=\"color:blue\">--</b></html>");
+        lbMarcaComputador.setText("--");
 
         lbModeloCpu.setText("--");
 
@@ -227,7 +227,7 @@ public class TelaDashboard extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jLabel8)
-                    .addComponent(lbMarcaComputador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbMarcaComputador)
                     .addComponent(lbModeloSO))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

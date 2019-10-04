@@ -313,7 +313,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lbMarcaComputador">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b style=&quot;color:blue&quot;&gt;--&lt;/b&gt;&lt;/html&gt;"/>
+        <Property name="text" type="java.lang.String" value="--"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lbModeloCpu">
