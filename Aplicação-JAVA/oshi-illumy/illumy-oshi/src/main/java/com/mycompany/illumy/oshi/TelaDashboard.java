@@ -6,28 +6,33 @@ import oshi.software.os.OperatingSystem;
 
 public class TelaDashboard extends javax.swing.JFrame {
 
-    Memoria memoria = new Memoria();
-    Processador processador = new Processador();
-    private final SystemInfo systemInfo = new SystemInfo();
-    private final OperatingSystem operatingSystem = systemInfo.getOperatingSystem();
-    private final HardwareAbstractionLayer hardware = systemInfo.getHardware();
-
-    public void mostraMemoria() {
-        lbMemoriaDisponivel.setText(memoria.getMemoriaDisponivel(hardware.getMemory()));
-        //lbMemoriaDisponivel.setText(processador.getUtilizacaoAtualProcessador(hardware.getProcessor()));
-    }
+    private final Memoria memoria;
+    private final Processador processador;
+    private final SistemaOperacional sistemaOperacional;
+    private final Hardware hardware;
+    private final SystemInfo systemInfo;
+    private final OperatingSystem operatingSystem;
 
     public TelaDashboard() {
+        memoria = new Memoria();
+        processador = new Processador();
+        sistemaOperacional = new SistemaOperacional();
+        hardware = new Hardware();
+        systemInfo = new SystemInfo();
+        operatingSystem = systemInfo.getOperatingSystem();
         initComponents();
     }
 
+    public void exibeDados(){
+        
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
         lbMemoriaDisponivel = new javax.swing.JLabel();
-        btnAtualizarDados = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -62,13 +67,6 @@ public class TelaDashboard extends javax.swing.JFrame {
         jLabel1.setText("Memória Disponivel:");
 
         lbMemoriaDisponivel.setText("--");
-
-        btnAtualizarDados.setText("Atualizar");
-        btnAtualizarDados.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAtualizarDadosActionPerformed(evt);
-            }
-        });
 
         jLabel2.setFont(new java.awt.Font("Bitstream Charter", 1, 18)); // NOI18N
         jLabel2.setText("Monitoramento de Máquina");
@@ -209,10 +207,6 @@ public class TelaDashboard extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lbTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(307, 307, 307)
-                .addComponent(btnAtualizarDados)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -273,17 +267,11 @@ public class TelaDashboard extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel15)
                             .addComponent(lbTemperatura))))
-                .addGap(49, 49, 49)
-                .addComponent(btnAtualizarDados)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnAtualizarDadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarDadosActionPerformed
-        mostraMemoria();
-    }//GEN-LAST:event_btnAtualizarDadosActionPerformed
 
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -314,7 +302,6 @@ public class TelaDashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAtualizarDados;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
