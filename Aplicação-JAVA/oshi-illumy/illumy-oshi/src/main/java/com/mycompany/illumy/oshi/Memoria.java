@@ -14,13 +14,11 @@ public class Memoria {
 
     //Valores de atualização por tempo
     public String getMemoriaDisponivel(GlobalMemory memoria) {
-        var memoriaDisponivel = memoria.getAvailable();
-        return FormatUtil.formatBytes(memoriaDisponivel);
+        return FormatUtil.formatBytes(memoria.getAvailable());
     }
 
     public String getMemoriaTotal(GlobalMemory memoria) {
-        var memoriaTotal = memoria.getTotal();
-        return FormatUtil.formatBytes(memoriaTotal);
+        return FormatUtil.formatBytes(memoria.getTotal());
     }
     //FIM //Valores de atualização por tempo
 }

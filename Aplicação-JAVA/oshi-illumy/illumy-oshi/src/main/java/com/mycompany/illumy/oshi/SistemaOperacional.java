@@ -14,22 +14,18 @@ public class SistemaOperacional {
     
     //Informações do Sistema Operacional e usuário
     public String getModeloSO(){
-        var modeloSO = sistemaOperacional.getFamily();
-        return modeloSO;
+        return sistemaOperacional.getFamily();
     }
     public String getFabricante(){
-        var fabricante = sistemaOperacional.getManufacturer();
-        return fabricante;
+        return sistemaOperacional.getManufacturer();
     }
     
     public String getHostname(){
-        var hostname = sistemaOperacional.getNetworkParams().getHostName();
-        return hostname;
+        return sistemaOperacional.getNetworkParams().getHostName();
     }
     
     public String getUsername(){
-        var username = sistemaOperacional.getProcess(0).getUser();
-        return username;
+        return sistemaOperacional.getProcess(0).getUser();
     }
     //FIM Informações do Sistema Operacional e usuário
 }

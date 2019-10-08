@@ -14,25 +14,21 @@ public class Processador {
     
     //Informações do Hardware
     public String getModeloProcessador(){
-        var modeloProcessador = systemInfo.getHardware().getProcessor().toString();
-        return modeloProcessador;
+        return systemInfo.getHardware().getProcessor().toString();
     }
     //FIM Informações do Hardware
     
     //Valores de atualização por tempo
     public String getUtilizacaoAtualProcessador(CentralProcessor processor) {
-        var utilizacaoAtual = String.format("%.1f%%", systemInfo.getHardware().getProcessor().getSystemCpuLoad() * 100);
-        return utilizacaoAtual;
+        return String.format("%.1f%%", systemInfo.getHardware().getProcessor().getSystemCpuLoad() * 100);
     }
 
     public String getThreadsAtivos() {
-        var threadsAtivos = systemInfo.getOperatingSystem().getThreadCount();
-        return String.valueOf(threadsAtivos);
+        return String.valueOf(systemInfo.getOperatingSystem().getThreadCount());
     }
 
     public String getTemperaturaCpu() {
-        var temperaturaCpu = systemInfo.getHardware().getSensors().getCpuTemperature();
-        return String.valueOf(temperaturaCpu);
+        return String.valueOf(systemInfo.getHardware().getSensors().getCpuTemperature());
     }
     //FIM Valores de atualização por tempo
 }
