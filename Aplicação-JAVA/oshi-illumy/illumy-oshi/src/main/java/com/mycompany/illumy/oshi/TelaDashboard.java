@@ -1,7 +1,6 @@
 package com.mycompany.illumy.oshi;
 
 import oshi.SystemInfo;
-import oshi.hardware.HardwareAbstractionLayer;
 import oshi.software.os.OperatingSystem;
 
 public class TelaDashboard extends javax.swing.JFrame {

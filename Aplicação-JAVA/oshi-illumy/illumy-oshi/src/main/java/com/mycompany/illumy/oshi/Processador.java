@@ -2,25 +2,28 @@ package com.mycompany.illumy.oshi;
 
 import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;
+import oshi.hardware.HardwareAbstractionLayer;
 
 public class Processador {
 
     private final SystemInfo systemInfo;
+    private final HardwareAbstractionLayer hardware;
 
     public Processador() {
         systemInfo = new SystemInfo();
+        hardware = systemInfo.getHardware();
     }
     
     
     //Informações do Hardware
     public String getModeloProcessador(){
-        return systemInfo.getHardware().getProcessor().toString();
+        return hardware.getProcessor().toString();
     }
     //FIM Informações do Hardware
     
     //Valores de atualização por tempo
     public String getUtilizacaoAtualProcessador(CentralProcessor processor) {
-        return String.format("%.1f%%", systemInfo.getHardware().getProcessor().getSystemCpuLoad() * 100);
+        return String.format("%.1f%%", hardware.getProcessor().getSystemCpuLoad() * 100);
     }
 
     public String getThreadsAtivos() {
@@ -28,7 +31,7 @@ public class Processador {
     }
 
     public String getTemperaturaCpu() {
-        return String.valueOf(systemInfo.getHardware().getSensors().getCpuTemperature());
+        return String.valueOf(hardware.getSensors().getCpuTemperature());
     }
     //FIM Valores de atualização por tempo
 }
