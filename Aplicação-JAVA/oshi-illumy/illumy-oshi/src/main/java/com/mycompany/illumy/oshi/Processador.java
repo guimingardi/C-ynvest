@@ -14,13 +14,6 @@ public class Processador {
         hardware = systemInfo.getHardware();
     }
     
-    
-    //Informações do Hardware
-    public String getModeloProcessador(){
-        return hardware.getProcessor().toString();
-    }
-    //FIM Informações do Hardware
-    
     //Valores de atualização por tempo
     public String getUtilizacaoAtualProcessador(CentralProcessor processor) {
         return String.format("%.1f%%", hardware.getProcessor().getSystemCpuLoad() * 100);

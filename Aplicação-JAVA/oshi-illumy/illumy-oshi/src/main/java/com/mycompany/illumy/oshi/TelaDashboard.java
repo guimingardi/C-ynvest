@@ -1,5 +1,7 @@
 package com.mycompany.illumy.oshi;
 
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import oshi.SystemInfo;
 import oshi.software.os.OperatingSystem;
 
@@ -22,10 +24,30 @@ public class TelaDashboard extends javax.swing.JFrame {
         initComponents();
     }
 
-    public void exibeDados(){
-        
+    public void exibeDados() {
+        lbMarcaComputador.setText(hardware.getMarcaComputador());
+        lbModeloCpu.setText(hardware.getModeloCPU());
+        lbModeloPlacaMae.setText(hardware.getModeloPlacaMae());
+        lbModeloSO.setText(sistemaOperacional.getModeloSO());
+        lbMarcaSO.setText(sistemaOperacional.getFabricante());
+        lbHostname.setText(sistemaOperacional.getHostname());
+
+        try {
+            while (true) {
+                lbMemoriaDisponivel.setText(memoria.getMemoriaDisponivel(systemInfo.getHardware().getMemory()));
+                lbMemoriaTotal.setText(memoria.getMemoriaTotal(systemInfo.getHardware().getMemory()));
+                lbArmazenamentoTotal.setText("AAAA");
+                lbArmazenamentoDisponivel.setText("AAAA");
+                lbUsoProcessador.setText(processador.getUtilizacaoAtualProcessador(systemInfo.getHardware().getProcessor()));
+                lbNucleos.setText(processador.getThreadsAtivos());
+                lbTemperatura.setText(processador.getTemperaturaCpu());
+                break;
+            }
+        } catch (Exception ex) {
+            System.out.println("Erro:" + ex);
+        }
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -60,6 +82,7 @@ public class TelaDashboard extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         lbArmazenamentoDisponivel = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -125,6 +148,13 @@ public class TelaDashboard extends javax.swing.JFrame {
 
         jLabel28.setText("Armazenamento disponivel:");
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -178,7 +208,8 @@ public class TelaDashboard extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel28)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(lbArmazenamentoDisponivel, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(lbArmazenamentoDisponivel, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -266,17 +297,18 @@ public class TelaDashboard extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel15)
                             .addComponent(lbTemperatura))))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(jButton1))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        exibeDados();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     public static void main(String args[]) {
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -284,23 +316,48 @@ public class TelaDashboard extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(TelaDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        java.awt.EventQueue.invokeLater(() -> {
-            new TelaDashboard().setVisible(true);
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                TelaDashboard tela = new TelaDashboard();
+                tela.setVisible(true);
+                tela.addWindowListener(new WindowListener() {
+
+                    @Override
+                    public void windowOpened(WindowEvent we) {
+                        tela.exibeDados();
+                    }
+
+                    @Override
+                    public void windowClosing(WindowEvent we) {}
+
+                    @Override
+                    public void windowClosed(WindowEvent we) {}
+
+                    @Override
+                    public void windowIconified(WindowEvent we) {}
+
+                    @Override
+                    public void windowDeiconified(WindowEvent we) {}
+
+                    @Override
+                    public void windowActivated(WindowEvent we) {}
+
+                    @Override
+                    public void windowDeactivated(WindowEvent we) {}
+                });
+            }
         });
+
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
