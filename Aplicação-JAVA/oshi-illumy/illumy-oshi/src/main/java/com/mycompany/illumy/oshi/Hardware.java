@@ -17,7 +17,7 @@ public class Hardware {
     }
     
     public String getModeloCPU(){
-        return hardware.getProcessor().getModel();
+        return hardware.getProcessor().getName();
     }
     
     public String getModeloPlacaMae(){

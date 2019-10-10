@@ -24,7 +24,7 @@ public class Processador {
     }
 
     public String getTemperaturaCpu() {
-        return String.valueOf(hardware.getSensors().getCpuTemperature());
+        return String.format("%.1f ºC",hardware.getSensors().getCpuTemperature());
     }
     //FIM Valores de atualização por tempo
 }
