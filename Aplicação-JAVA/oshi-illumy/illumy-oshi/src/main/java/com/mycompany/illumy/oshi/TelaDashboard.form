@@ -258,7 +258,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel10">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Hostname"/>
+        <Property name="text" type="java.lang.String" value="Hostname:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">

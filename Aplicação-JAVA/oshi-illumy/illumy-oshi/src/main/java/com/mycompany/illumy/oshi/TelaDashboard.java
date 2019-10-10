@@ -43,7 +43,6 @@ public class TelaDashboard extends javax.swing.JFrame {
                 lbUsoProcessador.setText(processador.getUtilizacaoAtualProcessador(systemInfo.getHardware().getProcessor()));
                 lbNucleos.setText(processador.getThreadsAtivos());
                 lbTemperatura.setText(processador.getTemperaturaCpu());
-                break;
             }
         } catch (Exception ex) {
             System.out.println("Erro:" + ex);
@@ -108,7 +107,7 @@ public class TelaDashboard extends javax.swing.JFrame {
 
         jLabel9.setText("Marca SO:");
 
-        jLabel10.setText("Hostname");
+        jLabel10.setText("Hostname:");
 
         jLabel11.setFont(new java.awt.Font("Bitstream Charter", 1, 18)); // NOI18N
         jLabel11.setText("Dados Atuais");
