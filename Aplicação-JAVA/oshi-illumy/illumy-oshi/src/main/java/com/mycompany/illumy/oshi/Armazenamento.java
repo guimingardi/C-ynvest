@@ -17,6 +17,7 @@ public class Armazenamento {
     }
 
     public String getDiscoDisponivel() {
+        disponivel = 0;
         for (OSFileStore fs : fsArray) {
             disponivel += fs.getUsableSpace();
         }
@@ -24,6 +25,7 @@ public class Armazenamento {
     }
 
     public String getDiscoTotal() {
+        total = 0;
         for (OSFileStore fs : fsArray) {
             total += fs.getTotalSpace();
         }
