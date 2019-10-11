@@ -2,8 +2,9 @@ package com.mycompany.illumy.oshi;
 
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.util.TimerTask;
+import java.util.Timer;
 import oshi.SystemInfo;
-import oshi.software.os.OperatingSystem;
 
 public class TelaDashboard extends javax.swing.JFrame {
 
@@ -13,11 +14,9 @@ public class TelaDashboard extends javax.swing.JFrame {
     private final SistemaOperacional sistemaOperacional;
     private final Hardware hardware;
     private final SystemInfo systemInfo;
-    private final OperatingSystem operatingSystem;
 
     public TelaDashboard() {
         systemInfo = new SystemInfo();
-        operatingSystem = systemInfo.getOperatingSystem();
         memoria = new Memoria();
         processador = new Processador();
         armazenamento = new Armazenamento(systemInfo.getOperatingSystem().getFileSystem());
@@ -35,15 +34,18 @@ public class TelaDashboard extends javax.swing.JFrame {
         lbHostname.setText(sistemaOperacional.getHostname());
 
         try {
-            while (true) {
-                lbMemoriaDisponivel.setText(memoria.getMemoriaDisponivel(systemInfo.getHardware().getMemory()));
-                lbMemoriaTotal.setText(memoria.getMemoriaTotal(systemInfo.getHardware().getMemory()));
-                lbArmazenamentoTotal.setText(armazenamento.getDiscoTotal());
-                lbArmazenamentoDisponivel.setText(armazenamento.getDiscoDisponivel());
-                lbUsoProcessador.setText(processador.getUtilizacaoAtualProcessador(systemInfo.getHardware().getProcessor()));
-                lbNucleos.setText(processador.getThreadsAtivos());
-                lbTemperatura.setText(processador.getTemperaturaCpu());
-            }
+            new Timer().scheduleAtFixedRate(new TimerTask() {
+                @Override
+                public void run() {
+            lbMemoriaDisponivel.setText(memoria.getMemoriaDisponivel(systemInfo.getHardware().getMemory()));
+            lbMemoriaTotal.setText(memoria.getMemoriaTotal(systemInfo.getHardware().getMemory()));
+            lbArmazenamentoTotal.setText(armazenamento.getDiscoTotal());
+            lbArmazenamentoDisponivel.setText(armazenamento.getDiscoDisponivel());
+            lbUsoProcessador.setText(processador.getUtilizacaoAtualProcessador(systemInfo.getHardware().getProcessor()));
+            lbNucleos.setText(processador.getThreadsAtivos());
+            lbTemperatura.setText(processador.getTemperaturaCpu());
+                }
+            }, 0, 5000);
         } catch (Exception ex) {
             System.out.println("Erro:" + ex);
         }
@@ -319,22 +321,28 @@ public class TelaDashboard extends javax.swing.JFrame {
                     }
 
                     @Override
-                    public void windowClosing(WindowEvent we) {}
+                    public void windowClosing(WindowEvent we) {
+                    }
 
                     @Override
-                    public void windowClosed(WindowEvent we) {}
+                    public void windowClosed(WindowEvent we) {
+                    }
 
                     @Override
-                    public void windowIconified(WindowEvent we) {}
+                    public void windowIconified(WindowEvent we) {
+                    }
 
                     @Override
-                    public void windowDeiconified(WindowEvent we) {}
+                    public void windowDeiconified(WindowEvent we) {
+                    }
 
                     @Override
-                    public void windowActivated(WindowEvent we) {}
+                    public void windowActivated(WindowEvent we) {
+                    }
 
                     @Override
-                    public void windowDeactivated(WindowEvent we) {}
+                    public void windowDeactivated(WindowEvent we) {
+                    }
                 });
             }
         });
