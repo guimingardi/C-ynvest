@@ -7,7 +7,11 @@
 .voltar {
   margin-left: 46%;
   text-decoration: none;
-  color: black;
+  color: #cfcfcf;
+}
+
+.voltar:hover{
+  color:black
 }
 
 body {
