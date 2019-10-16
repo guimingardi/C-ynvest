@@ -3,6 +3,7 @@ package com.mycompany.illumy.oshi;
 import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;
 import oshi.hardware.HardwareAbstractionLayer;
+import oshi.util.Util;
 
 public class Processador {
 
@@ -16,7 +17,10 @@ public class Processador {
     
     //Valores de atualização por tempo
     public String getUtilizacaoAtualProcessador(CentralProcessor processor) {
-        return String.format("%.1f%%", hardware.getProcessor().getSystemCpuLoad() * 100);
+        long[] ticks = processor.getSystemCpuLoadTicks();
+        Util.sleep(1000);
+        return String.format("%.1f%%", processor.getSystemCpuLoadBetweenTicks(ticks) * 100);
+        //return String.format("%.1f%%", hardware.getProcessor().getSystemCpuLoad() * 100);
     }
 
     public String getThreadsAtivos() {
