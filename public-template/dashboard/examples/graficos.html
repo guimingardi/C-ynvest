@@ -126,15 +126,21 @@
         <div class="container-mother">
 
           <div class="chart-line-one">
-            <div class="pizza-chart borderr"></div>
-            <div class="line-cpu borderr"></div>
+            <div class="pizza-chart borderr">
+              <canvas class="pie-chart"></canvas>
+            </div>
+            <div class="line-cpu borderr">
+              <canvas class="line-chart-cpu"></canvas>
+            </div>
           </div>
 
           <div class="chart-line-two">
             <div class="line-memory borderr">
-              
+              <canvas class="line-chart-ram"></canvas>
             </div>
-            <div class="line-disk borderr"></div>
+            <div class="line-disk borderr">
+              <canvas class="line-chart-disco"></canvas>
+            </div>
           </div>
 
         </div>
@@ -174,6 +180,11 @@
     </div>
     
     <!--   Core JS Files   -->
+
+    <!-- graficos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="js/graficos.js"></script>
+
     <script src="../assets/js/core/jquery.min.js"></script>
     <script src="../assets/js/core/popper.min.js"></script>
     <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
