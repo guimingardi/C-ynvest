@@ -1,22 +1,24 @@
 
 package com.mycompany.illumy.oshi;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-
+import org.apache.commons.dbcp2.BasicDataSource;
 
 public class ConnectionFactory {
     
-    public Connection getConnection() {
-        try {
-            return DriverManager.getConnection(
-                    "jdbc:sqlserver://srvillumy.database.windows.net:1433;database=bdillumy;"
-                    + "user=userillumy@srvillumy;password={#Gfgrupo4};encrypt=true;trustServerCertificate=false;"
-                    + "hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
-        } catch (SQLException e) {
-            throw new RuntimeException(e);     
-        }
+    private BasicDataSource dataSource; 
+   
+    public ConnectionFactory(){
+        dataSource = new BasicDataSource();
+        dataSource.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        dataSource.setUrl("jdbc:sqlserver://srvillumy.database.windows.net:1433;database=Projeto illumy;");
+        dataSource.setUsername("userillumy@srvillumy");
+        dataSource.setPassword("#Gfgrupo4");
     }
+
+    public BasicDataSource getDataSource() {
+        return dataSource; 
+    }
+    
+ 
     
 }

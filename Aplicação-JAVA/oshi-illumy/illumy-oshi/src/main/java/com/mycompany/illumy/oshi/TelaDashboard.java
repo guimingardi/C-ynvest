@@ -50,6 +50,23 @@ public class TelaDashboard extends javax.swing.JFrame {
             System.out.println("Erro:" + ex);
         }
     }
+    public void insertCPU(){        
+        
+            try {
+            Timer timer = new Timer();
+ 
+            timer.scheduleAtFixedRate(new TimerTask() {
+            public void run() {
+            String usoCpu = String.valueOf(lbUsoProcessador.getText());
+            InsertCPU conn = new InsertCPU(usoCpu);
+            conn.insertCpu();            
+
+        }
+    }, 10000, 10000);
+        } catch (Exception e) {
+            System.out.println("Erro ao inserir"+ e);
+        }
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -318,6 +335,7 @@ public class TelaDashboard extends javax.swing.JFrame {
                     @Override
                     public void windowOpened(WindowEvent we) {
                         tela.exibeDados();
+                        tela.insertCPU();
                     }
 
                     @Override
