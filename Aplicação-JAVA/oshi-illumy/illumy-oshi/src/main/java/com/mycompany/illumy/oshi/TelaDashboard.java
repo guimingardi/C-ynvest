@@ -57,18 +57,86 @@ public class TelaDashboard extends javax.swing.JFrame {
  
             timer.scheduleAtFixedRate(new TimerTask() {
             public void run() {
-            String usoCpu = String.valueOf(lbUsoProcessador.getText());
-            InsertCPU conn = new InsertCPU(usoCpu);
-            conn.insertCpu();            
+             
+            String modCPU = String.valueOf(hardware.getModeloCPU());    
+            String tempCPU = String.valueOf(processador.getTemperaturaCpu());
+            String usoCPU = String.valueOf(processador.getUtilizacaoAtualProcessador(systemInfo.getHardware().getProcessor()));            
+            
+            InsertCPU insert = new InsertCPU(usoCPU,modCPU,tempCPU);
+            
+            insert.insertCPU();
 
         }
-    }, 10000, 10000);
+    }, 5000, 5000);
         } catch (Exception e) {
             System.out.println("Erro ao inserir"+ e);
         }
     }
+    
+    public void insertServidor(){
+        try {
+            Timer timer = new Timer();
+            
+            timer.scheduleAtFixedRate(new TimerTask() {
+            public void run() {                
+                String modSO = String.valueOf(sistemaOperacional.getModeloSO());
+                String host = String.valueOf(sistemaOperacional.getHostname());
+                InsertServidor insert = new InsertServidor(modSO, host);
+                insert.InsertServidor();
+                timer.cancel();
+                timer.purge();
+                
+        }
+    }, 5000, 5000);
+        } catch (Exception e) {
+            System.out.println("Erro ao inserir"+ e);
+        }
+    }
+    
+    public void insertRAM(){        
+        
+            try {
+            Timer timer = new Timer();
+ 
+            timer.scheduleAtFixedRate(new TimerTask() {
+            public void run() {
+                
+            String total = String.valueOf(memoria.getMemoriaTotal(systemInfo.getHardware().getMemory()));
+            String livre = String.valueOf(memoria.getMemoriaDisponivel(systemInfo.getHardware().getMemory()));        
+            
+           InsertRam insert = new InsertRam(livre, total);
+            
+            insert.InsertRam();
 
-    @SuppressWarnings("unchecked")
+        }
+    }, 5000, 5000);
+        } catch (Exception e) {
+            System.out.println("Erro ao inserir"+ e);
+        }
+    }
+    public void insertDISCO(){        
+        
+            try {
+            Timer timer = new Timer();
+ 
+            timer.scheduleAtFixedRate(new TimerTask() {
+            public void run() {
+                
+            String total = String.valueOf(armazenamento.getDiscoTotal());
+            String livre = String.valueOf(armazenamento.getDiscoDisponivel());        
+            
+           InsertDisco insert = new InsertDisco(livre, total);
+            
+            insert.InsertDisco();
+
+        }
+    }, 5000, 5000);
+        } catch (Exception e) {
+            System.out.println("Erro ao inserir"+ e);
+        }
+    }
+          
+   
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -336,6 +404,9 @@ public class TelaDashboard extends javax.swing.JFrame {
                     public void windowOpened(WindowEvent we) {
                         tela.exibeDados();
                         tela.insertCPU();
+                        tela.insertRAM();
+                        tela.insertDISCO();
+                        tela.insertServidor();
                     }
 
                     @Override
