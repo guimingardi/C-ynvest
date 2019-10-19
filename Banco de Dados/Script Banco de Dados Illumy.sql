@@ -4,50 +4,49 @@ go
 use illumy
 go
 
+ -- CRIA플O DA TABELA EMPRESA
+ 
+ create table empresa(
+ idConta int not null primary key identity (1,1),
+ nomeUsuario varchar (45) not null,
+ senha varchar(20) not null,
+ telefone varchar(18) not null,
+ nomeEmpresa varchar(45) not null,
+ email varchar(50) not null,
+ endereco varchar(45) not null,
+ cep varchar (10) not null,
+ bairro varchar (45) not null,
+ numEmpresa int not null,
+ )
+
 
 -- CRIA플O DA TABELA ASSINATURA
 
  create table assinatura (
-idAssinatura int primary key identity (2000,4),
+idAssinatura int identity (1,1),
 codLicenca int,
-dataVencimento date
+dataVencimento date,
+fkEmpresa int,
+ foreign key (fkEmpresa) references empresa (idConta),
+ primary key (fkEmpresa,idAssinatura)
 )
 
- -- CRIA플O DA TABELA EMPRESA
- 
- create table empresa(
- idConta int primary key identity (1000,4),
- nomeUsuario varchar (45),
- senha varchar(20),
- telefone varchar(18),
- nomeEmpresa varchar(45),
- endereco varchar(45),
- cep varchar (10),
- bairro varchar (45),
- numEmpresa int,
- fkAssinatura int,
- foreign key (fkAssinatura) references assinatura (idAssinatura)
-)
-
-
- 
 --CRIA플O DA TABELA USUARIO 
  
  create table usuario (
- idLogin int primary key identity(3000,4),
+ idLogin int primary key identity(1,1),
  nomeUser varchar(45),
  senha varchar(45),
  email varchar(45),
  fkConta int,
  foreign key (fkConta) references empresa (idConta),
- fkAssinatura int,
-  foreign key (fkAssinatura) references assinatura (idAssinatura)
- );
+ fkAssinatura int
+ )
 
  --CRIA플O DA TABELA SERVIDORES
 
  create table servidores (
- idServidor int primary key identity(3000,4),
+ idServidor int primary key identity(1,1),
  nomeServidor varchar (45),
  sistemaOperacional varchar(45),
  )
@@ -65,17 +64,18 @@ dataVencimento date
  --CRIA플O DA TABELA CPU
 
  create table CPU (
- idCPU int primary key identity(4000,4),
+ idCPU int identity(4000,4),
  tempCPU varchar(8),
  modProcessador varchar(45),
  fkServidor int,
- foreign key (fkServidor) references servidores (idServidor)
+ foreign key (fkServidor) references servidores (idServidor),
+ primary key (idCPU,fkServidor)
  )
 
  --CRIA플O DA TABELA DISCO
 
  create table disco(
- idDisco int primary key identity (5000,4),
+ idDisco int identity (5000,4),
  tamanhoUsadoGB decimal(6,2),
  tamanhoTotalGB decimal(6,2),
  espacoLivreGB decimal (6,2),
@@ -83,13 +83,14 @@ dataVencimento date
  tamanhoTotalPorcentagem varchar(10),
  espacoLivrePorcentagem varchar(10),
  fkServidor int,
- foreign key (fkServidor) references servidores (idServidor)
+ foreign key (fkServidor) references servidores (idServidor),
+ primary key (idDisco,fkServidor)
  )
 
- --CRIA플O DA TABELA MEMORIARAM
+ --CRIA플O DA TABELA MEMORIA RAM
 
  create table memoriaRam (
- idRAM int primary key identity (6000,4),
+ idRAM int identity (6000,4),
  memoriaUsadaGB decimal(6,2),
  memoriaTotalGB decimal(6,2),
  espacoLivreGB decimal (6,2),
@@ -97,7 +98,8 @@ dataVencimento date
  memoriaTotalPorcentagem varchar (10),
  espacoLivrePorcentagem varchar(10),
  fkServidor int,
- foreign key (fkServidor) references servidores (idServidor)
+ foreign key (fkServidor) references servidores (idServidor),
+ primary key (idRAM,fkServidor)
  )
 
 
