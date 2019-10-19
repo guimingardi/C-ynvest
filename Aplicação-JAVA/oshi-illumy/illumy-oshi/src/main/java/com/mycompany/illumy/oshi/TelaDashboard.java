@@ -56,6 +56,7 @@ public class TelaDashboard extends javax.swing.JFrame {
             Timer timer = new Timer();
  
             timer.scheduleAtFixedRate(new TimerTask() {
+
             public void run() {
              
             String modCPU = String.valueOf(hardware.getModeloCPU());    
@@ -67,7 +68,7 @@ public class TelaDashboard extends javax.swing.JFrame {
             insert.insertCPU();
 
         }
-    }, 5000, 5000);
+    }, 100, 10000);
         } catch (Exception e) {
             System.out.println("Erro ao inserir"+ e);
         }
@@ -76,8 +77,9 @@ public class TelaDashboard extends javax.swing.JFrame {
     public void insertServidor(){
         try {
             Timer timer = new Timer();
-            
+ 
             timer.scheduleAtFixedRate(new TimerTask() {
+     
             public void run() {                
                 String modSO = String.valueOf(sistemaOperacional.getModeloSO());
                 String host = String.valueOf(sistemaOperacional.getHostname());
@@ -87,7 +89,7 @@ public class TelaDashboard extends javax.swing.JFrame {
                 timer.purge();
                 
         }
-    }, 5000, 5000);
+    }, 200, 10000);
         } catch (Exception e) {
             System.out.println("Erro ao inserir"+ e);
         }
@@ -99,6 +101,7 @@ public class TelaDashboard extends javax.swing.JFrame {
             Timer timer = new Timer();
  
             timer.scheduleAtFixedRate(new TimerTask() {
+ 
             public void run() {
                 
             String total = String.valueOf(memoria.getMemoriaTotal(systemInfo.getHardware().getMemory()));
@@ -109,7 +112,7 @@ public class TelaDashboard extends javax.swing.JFrame {
             insert.InsertRam();
 
         }
-    }, 5000, 5000);
+    }, 300, 10000);
         } catch (Exception e) {
             System.out.println("Erro ao inserir"+ e);
         }
@@ -120,6 +123,7 @@ public class TelaDashboard extends javax.swing.JFrame {
             Timer timer = new Timer();
  
             timer.scheduleAtFixedRate(new TimerTask() {
+     
             public void run() {
                 
             String total = String.valueOf(armazenamento.getDiscoTotal());
@@ -130,7 +134,7 @@ public class TelaDashboard extends javax.swing.JFrame {
             insert.InsertDisco();
 
         }
-    }, 5000, 5000);
+    }, 400, 10000);
         } catch (Exception e) {
             System.out.println("Erro ao inserir"+ e);
         }
