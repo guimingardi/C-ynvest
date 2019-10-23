@@ -8,10 +8,12 @@ public class InsertDisco {
     
     protected String disponivel;
     protected String total;
+    protected String fkServidor;
 
     public InsertDisco(String disponivel, String total) {
     this.disponivel = disponivel;                
     this.total = total;                              
+    this.fkServidor = "12";                              
     }
 
     public void InsertDisco() {
@@ -22,8 +24,8 @@ public class InsertDisco {
    
         try {
            jdbcTemplate.update(
-                "insert into disco (tamanhoTotalGB, espacoLivreGB)"
-                + "values(?,?)", total, disponivel);
+                "insert into disco (espacoLivreGB, tamanhoTotalGB, fkServidor)"
+                + "values(?,?,?)", disponivel, total, fkServidor);
              
         } catch (Exception e) {
             System.out.println("Erro"+e);

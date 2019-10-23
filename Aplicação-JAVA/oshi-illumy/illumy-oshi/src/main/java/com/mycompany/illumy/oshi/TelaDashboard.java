@@ -68,32 +68,32 @@ public class TelaDashboard extends javax.swing.JFrame {
             insert.insertCPU();
 
         }
-    }, 100, 10000);
-        } catch (Exception e) {
-            System.out.println("Erro ao inserir"+ e);
-        }
-    }
-    
-    public void insertServidor(){
-        try {
-            Timer timer = new Timer();
- 
-            timer.scheduleAtFixedRate(new TimerTask() {
-     
-            public void run() {                
-                String modSO = String.valueOf(sistemaOperacional.getModeloSO());
-                String host = String.valueOf(sistemaOperacional.getHostname());
-                InsertServidor insert = new InsertServidor(modSO, host);
-                insert.InsertServidor();
-                timer.cancel();
-                timer.purge();
-                
-        }
     }, 200, 10000);
         } catch (Exception e) {
             System.out.println("Erro ao inserir"+ e);
         }
     }
+    
+//    public void insertServidor(){
+//        try {
+//            Timer timer = new Timer();
+// 
+//            timer.scheduleAtFixedRate(new TimerTask() {
+//     
+//            public void run() {                
+//                String modSO = String.valueOf(sistemaOperacional.getModeloSO());
+//                String host = String.valueOf(sistemaOperacional.getHostname());
+//                InsertServidor insert = new InsertServidor(modSO, host);
+//                insert.InsertServidor();
+//                timer.cancel();
+//                timer.purge();
+//                
+//        }
+//    }, 200, 10000);
+//        } catch (Exception e) {
+//            System.out.println("Erro ao inserir"+ e);
+//        }
+//    }
     
     public void insertRAM(){        
         
@@ -409,8 +409,7 @@ public class TelaDashboard extends javax.swing.JFrame {
                         tela.exibeDados();
                         tela.insertCPU();
                         tela.insertRAM();
-                        tela.insertDISCO();
-                        tela.insertServidor();
+                        tela.insertDISCO();                      
                     }
 
                     @Override
