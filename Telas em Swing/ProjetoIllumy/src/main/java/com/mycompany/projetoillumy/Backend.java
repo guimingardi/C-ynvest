@@ -6,10 +6,13 @@ import java.io.InputStreamReader;
 
 public class Backend {
     
-    public static void main(String[] args) throws IOException {
+    public String executaPowerShell(Integer valor) throws IOException {
         //String command = "powershell.exe  your command";
   //Getting the version
-  String command = "powershell.exe  echo 'Ola Mundo'";
+  
+ // String comando = String.format(" echo 'Hello World %d'", valor);
+  String comando = "get-vmmemory IllumyW001";
+  String command = "powershell.exe "+comando;
   // Executing the command
   Process powerShellProcess = Runtime.getRuntime().exec(command);
   // Getting the results
@@ -28,6 +31,7 @@ public class Backend {
                 System.out.println(line);
             }     }
   System.out.println("Done");
+  return line;
     }
     
 }
