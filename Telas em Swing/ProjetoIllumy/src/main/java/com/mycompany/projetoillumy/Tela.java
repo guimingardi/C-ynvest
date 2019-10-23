@@ -5,15 +5,18 @@
  */
 package com.mycompany.projetoillumy;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author guimi
  */
 public class Tela extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Tela
-     */
+    Backend funcionamento = new Backend();
+     
     public Tela() {
         initComponents();
     }
@@ -41,6 +44,7 @@ public class Tela extends javax.swing.JFrame {
         lbValorSlider = new javax.swing.JLabel();
         btProvisionar = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
+        lbConsole = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -129,9 +133,16 @@ public class Tela extends javax.swing.JFrame {
         btProvisionar.setBackground(new java.awt.Color(22, 52, 158));
         btProvisionar.setForeground(new java.awt.Color(255, 255, 255));
         btProvisionar.setText("Provisionar");
+        btProvisionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btProvisionarActionPerformed(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jLabel9.setText("GB");
+
+        lbConsole.setText("--");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -156,8 +167,12 @@ public class Tela extends javax.swing.JFrame {
                         .addGap(311, 311, 311)
                         .addComponent(btProvisionar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(jLabel2))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(lbConsole, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(50, 50, 50))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -181,18 +196,26 @@ public class Tela extends javax.swing.JFrame {
                 .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btProvisionar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(140, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbConsole, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(19, 19, 19))
         );
 
         pack();
@@ -200,19 +223,31 @@ public class Tela extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
-        // TODO add your handling code here:
-        lbValorSlider.setText(String.valueOf(jSlider1.getValue()));
         
+        lbValorSlider.setText(String.valueOf(jSlider1.getValue()));
+        String valor = lbValorSlider.getText();
+        
+         
     }//GEN-LAST:event_jSlider1StateChanged
 
-    private void btnSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSairMouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_btnSairMouseClicked
+    private void btProvisionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btProvisionarActionPerformed
+        lbValorSlider.setText(String.valueOf(jSlider1.getValue()));
+        Integer valor = jSlider1.getValue();
+        try {
+            lbConsole.setText(funcionamento.executaPowerShell(valor));
+        } catch (IOException ex) {
+            Logger.getLogger(Tela.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btProvisionarActionPerformed
 
     private void btnMonitorarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMonitorarMouseClicked
         new TelaDashboard().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnMonitorarMouseClicked
+
+    private void btnSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSairMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_btnSairMouseClicked
 
     /**
      * @param args the command line arguments
@@ -263,6 +298,7 @@ public class Tela extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSlider jSlider1;
+    private javax.swing.JLabel lbConsole;
     private javax.swing.JLabel lbValorSlider;
     // End of variables declaration//GEN-END:variables
 }
