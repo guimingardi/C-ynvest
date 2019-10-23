@@ -30,22 +30,25 @@
     </div>
     <div class="sidebar-wrapper">
       <ul class="nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="./dashboard.html">
-            <i class="material-icons">dashboard</i>
-            <p class="text-item">Dashboard</p>
-          </a>
-        </li>
+
+          <li class="nav-item active">
+              <a class="nav-link" href="./dashboard.html">
+                <i class="material-icons">dashboard</i>
+                <p class="text-item">Lista de Servidores</p>
+              </a>
+            </li>
+        
         <li class="nav-item ">
           <a class="nav-link" href="./user.html">
             <i class="material-icons">person</i>
             <p class="text-item">Perfil</p>
           </a>
         </li>
+     
         <li class="nav-item">
-          <a class="nav-link" href="./tables.html">
+          <a class="nav-link" href="./cadastroNovosUsuarios.html">
             <i class="material-icons">content_paste</i>
-            <p class="text-item">Tabela de Servidores</p>
+            <p class="text-item">Cadastro Novos Usuários</p>
           </a>
         </li>
         <li class="nav-item active-pro ">
@@ -92,8 +95,8 @@
                 </p>
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Alerta amarelo! Serviodr 0281 - SC</a>
-                <a class="dropdown-item" href="#">Disco em 85% Servidor 0152 - PR </a>
+                <a class="dropdown-item" href="#">Alerta amarelo! Servidor 0002 - SP</a>
+                <a class="dropdown-item" href="#">Alerta vermelho! Servidor 0003 - SP </a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -121,23 +124,91 @@
       </div>
     </nav>
     <!-- End Navbar -->
+
     <div class="content">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-4">
+              <a href="./graficos.html">
             <div class="card card-chart">
-              <div class="alert-card-red">
-                <div class="card-body">
-                  <h4 class="card-title">Servidor 0001 - SP</h4>
-                  <p class="card-category">
-                    <span class="alert-red"> 55% </span> de Memória</p>
+              <div class="card-header card-header-success" >
+                <div class="ct-chart" id="dailySalesChart"></div>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Servidor 0001 - SP</h4>
+                <p class="card-category">
+                  <span class="alert-red"> 55% </span> de Memória</p>
                   <span class="alert-ok"> 70% </span> de CPU</p>
                   <span class="alert-yellow"> 20% </span> de Disco</p>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="material-icons">access_time</i> Atualizado a 3 minutos atrás
                 </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">access_time</i> Atualizado a 3 minutos atrás
-                  </div>
+              </div>
+            </div>
+            </a>
+          </div>
+
+          <div class="col-md-4">
+              <a href="./graficos2.html">
+            <div class="card card-chart">
+              <div class="card-header card-header-warning">
+                <div class="ct-chart" id="websiteViewsChart"></div>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Servidor 0002 - SP</h4>
+                <p class="card-category"></p>
+                <span class="alert-red"> 55% </span> de Memória</p>
+                  <span class="alert-ok"> 70% </span> de CPU</p>
+                  <span class="alert-yellow"> 20% </span> de Disco</p>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="material-icons">access_time</i> Atualizado a 3 minutos atrás
+                </div>
+              </div>
+            </div>
+          </a>
+          </div>
+
+          <div class="col-md-4">
+              <a href="./graficos3.html">
+            <div class="card card-chart">
+              <div class="card-header card-header-danger">
+                <div class="ct-chart" id="completedTasksChart"></div>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Servidor 0003 - SP</h4>
+                <p class="card-category"></p>
+                <span class="alert-red"> 55% </span> de Memória</p>
+                  <span class="alert-ok"> 70% </span> de CPU</p>
+                  <span class="alert-yellow"> 20% </span> de Disco</p>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="material-icons">access_time</i> Atualizado a 3 minutos atrás
+                </div>
+              </div>
+            </div>
+          </a>
+          </div>
+          
+          <!-- <div class="col-md-4">
+            <div class="card card-chart">
+              <div class="card-header card-header-danger">
+                <div class="ct-chart" id="completedTasksChart"></div>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Servidor 0004 - SP</h4>
+                <p class="card-category"></p>
+                <span class="alert-red"> 55% </span> de Memória</p>
+                  <span class="alert-ok"> 70% </span> de CPU</p>
+                  <span class="alert-yellow"> 20% </span> de Disco</p>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="material-icons">access_time</i> Atualizado a 3 minutos atrás
                 </div>
               </div>
             </div>
@@ -145,18 +216,19 @@
 
           <div class="col-md-4">
             <div class="card card-chart">
-              <div class="alert-card-red">
-                <div class="card-body">
-                  <h4 class="card-title">Servidor 0002 - SP</h4>
-                  <p class="card-category">
-                    <span class="alert-red"> 55% </span> de Memória</p>
+              <div class="card-header card-header-warning">
+                <div class="ct-chart" id="websiteViewsChart"></div>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Servidor 0005 - SP</h4>
+                <p class="card-category"></p>
+                <span class="alert-red"> 55% </span> de Memória</p>
                   <span class="alert-ok"> 70% </span> de CPU</p>
                   <span class="alert-yellow"> 20% </span> de Disco</p>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">access_time</i> Atualizado a 3 minutos atrás
-                  </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="material-icons">access_time</i> Atualizado a 3 minutos atrás
                 </div>
               </div>
             </div>
@@ -164,81 +236,25 @@
 
           <div class="col-md-4">
             <div class="card card-chart">
-              <div class="alert-card-green">
-                <div class="card-body">
-                  <h4 class="card-title">Servidor 0003 - SP</h4>
-                  <p class="card-category">
-                    <span class="alert-red"> 55% </span> de Memória</p>
+              <div class="card-header card-header-success">
+                <div class="ct-chart" id="dailySalesChart"></div>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Servidor 0006 - SP</h4>
+                <p class="card-category">
+                  <span class="alert-red"> 55% </span> de Memória</p>
                   <span class="alert-ok"> 70% </span> de CPU</p>
                   <span class="alert-yellow"> 20% </span> de Disco</p>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">access_time</i> Atualizado a 3 minutos atrás
-                  </div>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="material-icons">access_time</i> Atualizado a 3 minutos atrás
                 </div>
               </div>
             </div>
           </div>
+        </div> -->
 
-          <div class="col-md-4">
-            <div class="card card-chart">
-              <div class="alert-card-green">
-                <div class="card-body">
-                  <h4 class="card-title">Servidor 0004 - SP</h4>
-                  <p class="card-category">
-                    <span class="alert-red"> 55% </span> de Memória</p>
-                  <span class="alert-ok"> 70% </span> de CPU</p>
-                  <span class="alert-yellow"> 20% </span> de Disco</p>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">access_time</i> Atualizado a 3 minutos atrás
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card card-chart">
-              <div class="alert-card-green">
-                <div class="card-body">
-                  <h4 class="card-title">Servidor 0005 - SP</h4>
-                  <p class="card-category">
-                    <span class="alert-red"> 55% </span> de Memória</p>
-                  <span class="alert-ok"> 70% </span> de CPU</p>
-                  <span class="alert-yellow"> 20% </span> de Disco</p>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">access_time</i> Atualizado a 3 minutos atrás
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card card-chart">
-              <div class="alert-card-yellow">
-                <div class="card-body">
-                  <h4 class="card-title">Servidor 0006 - SP</h4>
-                  <p class="card-category">
-                    <span class="alert-red"> 55% </span> de Memória</p>
-                  <span class="alert-ok"> 70% </span> de CPU</p>
-                  <span class="alert-yellow"> 20% </span> de Disco</p>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">access_time</i> Atualizado a 3 minutos atrás
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
         <footer class="footer">
           <div class="container-fluid">
             <nav class="float-left">
@@ -271,6 +287,7 @@
         </footer>
       </div>
     </div>
+
     <!--   Core JS Files   -->
     <script src="../assets/js/core/jquery.min.js"></script>
     <script src="../assets/js/core/popper.min.js"></script>
@@ -314,6 +331,7 @@
     <script src="../assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
     <!-- Material Dashboard DEMO methods, don't include it in your project! -->
     <script src="../assets/demo/demo.js"></script>
+
     <script>
       $(document).ready(function () {
         $().ready(function () {
@@ -327,7 +345,7 @@
 
           window_width = $(window).width();
 
-          fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+          fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p ').html();
 
           if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
             if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
@@ -491,7 +509,10 @@
         md.initDashboardPageCharts();
 
       });
+
+      
     </script>
+    
 </body>
 
 </html>
