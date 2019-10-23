@@ -10,11 +10,13 @@ public class InsertCPU {
     protected String usoCPU;
     protected String modCPU;
     protected String tempCPU;
+    protected String fkServidor;
 
     public InsertCPU(String usoCPU, String modCPU,String tempCPU) {
     this.usoCPU = usoCPU;                
     this.modCPU = modCPU;                
     this.tempCPU = tempCPU;                
+    this.fkServidor = "12";                
     }
 
     public void insertCPU() {
@@ -25,8 +27,8 @@ public class InsertCPU {
    
         try {
            jdbcTemplate.update(
-                "insert into CPU (utilizacao_atual, modProcessador, tempCPU)"
-                + "values(?,?,?)", usoCPU, modCPU, tempCPU);
+                "insert into CPU (utilizacaoAtual, modProcessador, tempCPU, fkServidor)"
+                + "values(?,?,?,?)", usoCPU, modCPU, tempCPU,fkServidor);
              
         } catch (Exception e) {
             System.out.println("Erro"+e);
