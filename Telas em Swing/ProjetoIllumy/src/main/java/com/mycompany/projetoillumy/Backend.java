@@ -8,22 +8,23 @@ public class Backend {
     
     public String executaPowerShell(Integer valor) throws IOException {
         //String command = "powershell.exe  your command";
-  //Getting the version
   
  // String comando = String.format(" echo 'Hello World %d'", valor);
   String comando = "get-vmmemory IllumyW001";
   String command = "powershell.exe "+comando;
-  // Executing the command
+  // Executando o comando
   Process powerShellProcess = Runtime.getRuntime().exec(command);
-  // Getting the results
+  // Capturando os resultados
   powerShellProcess.getOutputStream().close();
   String line;
+  //Saída principal
   System.out.println("Standard Output:");
         try (BufferedReader stdout = new BufferedReader(new InputStreamReader(
                 powerShellProcess.getInputStream()))) {
             while ((line = stdout.readLine()) != null) {
                 System.out.println(line);
             }     }
+  //Saída de erro
   System.out.println("Standard Error:");
         try (BufferedReader stderr = new BufferedReader(new InputStreamReader(
                 powerShellProcess.getErrorStream()))) {
